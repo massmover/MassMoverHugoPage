@@ -1,0 +1,17 @@
+languageCode = "en-us"
+title = "CommanderBot"
+baseURL = "http://localhost:1313/"
+theme = "dopetrope"
+
+[params.portfolio]
+    title = "Invite The Bot"
+    foldername = "invite"
+    findoutmoretext = "Find out more"
+
+#[params.blog]
+#   title = "The Blog"
+#   viewalltext = "View All"
+#   foldername = "blog"
+
+[params.settings]
+    googleanalytics = ""
