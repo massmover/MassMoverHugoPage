@@ -11,8 +11,8 @@ paginate = 5
 
 [languages]
   [languages.en]
-    title = "Hello Friend"
-    subtitle = "A simple theme for Hugo"
+    title = "Commander Bot"
+    subtitle = "A Discord multi-bot capable of moving users quickly"
     keywords = ""
     copyright = ""
     writtenBy = "Written by"
@@ -20,7 +20,7 @@ paginate = 5
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "hello friend"
+      logoText = "Commander Multi-Bot"
       logoHomeLink = "/"
     # or
     #
@@ -29,10 +29,10 @@ paginate = 5
 
     [languages.en.menu]
       [[languages.en.menu.main]]
+        identifier = "news"
+        name = "News"
+        url = "/news"
+      [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
         url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
