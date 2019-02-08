@@ -1,17 +1,38 @@
+baseurl = "/"
 languageCode = "en-us"
-title = "CommanderBot"
-baseURL = "http://localhost:1313/"
-theme = "dopetrope"
+theme = "hello-friend"
+paginate = 5
 
-[params.portfolio]
-    title = "Invite The Bot"
-    foldername = "invite"
-    findoutmoretext = "Find out more"
+[params]
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+  # "light" or "dark"
+  defaultTheme = "dark"
 
-#[params.blog]
-#   title = "The Blog"
-#   viewalltext = "View All"
-#   foldername = "blog"
+[languages]
+  [languages.en]
+    title = "Hello Friend"
+    subtitle = "A simple theme for Hugo"
+    keywords = ""
+    copyright = ""
+    writtenBy = "Written by"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
 
-[params.settings]
-    googleanalytics = ""
+    [languages.en.params.logo]
+      logoText = "hello friend"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+      [[languages.en.menu.main]]
+        identifier = "showcase"
+        name = "Showcase"
+        url = "/showcase"
