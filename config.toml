@@ -1,11 +1,14 @@
 baseurl = "/"
 languageCode = "en-us"
+author = 'Rafael Passos @Auyer'
 theme = "hello-friend"
 paginate = 5
+publishDir = "publish"
+googleAnalytics = "UA-122073247-1" 
 
 [params]
   # dir name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+  contentTypeName = "news"
   # "light" or "dark"
   defaultTheme = "dark"
 

@@ -1,84 +1,40 @@
 ---
-title: "Showcase"
-date: "2019-01-18"
-author: "Lorem Ipsum"
+title: "Commander Multi-Bot"
+date: "2019-01-09"
+author: "Auyer"
 ---
 
-## Header 2
+This is an OpenSource Project available on Github:
+<a href="https://github.com/auyer/commanderBot"><img src="/img/Octocat.png" height="300" alt="GitHub Logo"></a>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. **Donec quis dolor nec nunc mollis interdum vel in purus**. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.
+The CommanderBot is a Multi-Token Discord Bot.
+This can be used to split intensive operations, or API limited opperations like the "User Voice Channel Move" opperation (limited by the API). 
 
-> Fusce pharetra suscipit orci nec tempor. Quisque vitae sem sit amet sem mollis consequat. Sed at imperdiet lorem. Vestibulum pharetra faucibus odio, ac feugiat tellus sollicitudin at. Pellentesque varius tristique mi imperdiet dapibus. Duis orci odio, sodales lacinia venenatis sit amet, feugiat et diam.
+Is is capable of using N "Servant" Bot connections to perform fast mass "User Move" operations, and the request will be executed by the ammount of bots connected to the server.
 
-### Header 3
+## Configuration
 
-Nulla libero turpis, lacinia vitae cursus ut, auctor dictum nisl. Fusce varius felis nec sem ullamcorper, at convallis nisi vestibulum. Duis risus odio, porta sit amet placerat mollis, tincidunt non mauris. Suspendisse fringilla, `odio a dignissim pharetra`, est urna sollicitudin urna, eu scelerisque magna ex vitae tellus.
+Get your Discord Bot tokens (at least one) in the [official developers portal](https://discordapp.com/developers)
 
-```css
-/* PostCSS code */
+The first one should be in the "CommanderToken" slot in the config file.
+The rest will be the servant Tokens, and should be added in a List.
 
-pre {
-  background: #1a1a1d;
-  padding: 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  overflow: auto;
+The Permission integer must be 16780288 (Move, Read messages, and Write messages).
 
-  @media (--phone) {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
+## Installation
+You can get the lastest binary here: (soon)
 
-  code {
-    background: none !important;
-    color: #ccc;
-    padding: 0;
-    font-size: inherit;
-  }
-}
+## Building Yourself
+```go
+go get -u github.com/auyer/commanderBot
+```
+Build using 
+```go
+go build .
+```
+If you want to cross compile it to run in a different OS or architecturte (like a rapberry pi), do:
+```go
+CGO_ENABLED=0 CC=arm-linux-gnueabi-cc GOOS=linux GOARCH=arm GOARM=6 go build .
 ```
 
-```js
-// JS code
-
-const menuTrigger = document.querySelector('.menu-trigger')
-const menu = document.querySelector('.menu')
-const mobileQuery = getComputedStyle(document.body).getPropertyValue('--phoneWidth')
-const isMobile = () => window.matchMedia(mobileQuery).matches
-const isMobileMenu = () => {
-  menuTrigger.classList.toggle('hidden', !isMobile())
-  menu.classList.toggle('hidden', isMobile())
-}
-
-isMobileMenu()
-
-menuTrigger.addEventListener('click', () => menu.classList.toggle('hidden'))
-
-window.addEventListener('resize', isMobileMenu)
-```
-
-```html
-<!-- HTML code -->
-
-<section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-    {{ range .Pages }}
-      {{ .Render "summary"}}
-    {{ end }}
-  </div>
-</section>
-```
-
-#### Header 4
-
-Curabitur scelerisque felis viverra varius scelerisque. Ut enim libero, molestie gravida blandit at, mollis ornare tellus. Cras arcu mi, ultrices vel pulvinar vel, volutpat eu tortor. Nullam nec eros quis massa ultrices iaculis sed in metus. Praesent sollicitudin sem sit amet orci tempor gravida.
-
-- Maecenas elementum vitae nibh vitae porttitor.
-- Aenean consequat, risus ut cursus placerat, arcu nulla sodales risus, ut molestie tellus tellus et dui.
-- Integer imperdiet turpis vitae lacus imperdiet, ut ornare ligula auctor. Integer in mi eu velit vehicula suscipit eget vulputate nulla.
-- Etiam vitae enim quis velit lobortis placerat a ut sem.
-  - Curabitur lobortis ante sit amet orci pulvinar, sollicitudin viverra nunc accumsan.
-  - Praesent fermentum orci quis leo facilisis posuere.
-
-Aliquam erat volutpat. In hac habitasse platea dictumst. Nunc ut tincidunt mauris. Sed at gravida risus, id semper magna. Nullam vitae enim mattis, sodales neque non, pharetra elit. Cras sit amet sagittis augue, et finibus turpis. Ut tempus tincidunt diam vel pharetra. Nulla porttitor odio sit amet nulla scelerisque, quis aliquam mi imperdiet. Sed tincidunt dui vel tellus vestibulum rhoncus. Donec tempus ultrices velit.
+<style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 22px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/auyer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
