@@ -1,5 +1,5 @@
 +++
-title = "Commander Bot Beta"
+title = "MassMover Bot Beta"
 date = "2019-02-08"
 author = "Auyer"
 description = "First Wbesite and Bot Versions relesed"

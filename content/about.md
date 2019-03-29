@@ -1,16 +1,16 @@
 ---
-title: "Commander Multi-Bot"
+title: "MassMover Multi-Bot"
 date: "2019-01-09"
 author: "Auyer"
 ---
 
 This is an OpenSource Project available on Github:
-<a href="https://github.com/auyer/commanderBot"><img src="/img/Octocat.png" height="300" alt="GitHub Logo"></a>
+<a href="https://github.com/auyer/massmoverbot"><img src="/img/Octocat.png" height="300" alt="GitHub Logo"></a>
 
-The CommanderBot is a Multi-Token Discord Bot.
+The MassMover Bot is a Multi-Token Discord Bot.
 This can be used to split intensive operations, or API limited opperations like the "User Voice Channel Move" opperation (limited by the API). 
 
-Is is capable of using N "Servant" Bot connections to perform fast mass "User Move" operations, and the request will be executed by the ammount of bots connected to the server.
+Is is capable of using N "Power Up" Bot connections to perform fast mass "User Move" operations, and the request will be executed by the ammount of bots connected to the server.
 
 ## Configuration
 
@@ -26,7 +26,7 @@ You can get the lastest binary here: (soon)
 
 ## Building Yourself
 ```go
-go get -u github.com/auyer/commanderBot
+go get -u github.com/auyer/massmover
 ```
 Build using 
 ```go
