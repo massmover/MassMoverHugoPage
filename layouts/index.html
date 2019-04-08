@@ -1,87 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ $.Site.Language }}">
-    <style>
-        * {
-          box-sizing: border-box;
-        }
-        .row {
-          display: flex;
-        }
-        /* Create two equal columns that sits next to each other */
-        .column {
-          flex: 33%;
-          padding: 10px;
-          height: 300px; /* Should be removed. Only for demonstration */
-        }
-        .fullcolumn {
-          flex: 100%;
-          padding: 10px;
-          height: 300px; /* Should be removed. Only for demonstration */
-        }
-        .Blurplebox {
-          border-radius: 25px;
-          padding: 30px ;
-          border: 20px solid #7289DA ;
-          margin: 25px;
-        }
-        </style>
-<head>
-  {{ block "title" . }}
-    <title>{{ if .IsHome }}{{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ end }}</title>
-  {{ end }}
-  {{ partial "head.html" . }}
-</head>
-<body class="{{ if ne $.Site.Params.defaultTheme "light" -}} dark-theme {{- end -}}">
-<div class="container">
-  {{ partial "header.html" . }}
-  <div class="content">
-      <div class="Blurplebox" >
-        <h1 style="text-align:center" class="post-title">MassMover</h1>
-        <h2 style="text-align:center" class="post-title"><img src="svg/discordBlue.svg" height="80" alt="Discord Logo">Bot</h2>
-          <!-- <h2 class="post-title">Commander Multi<img src="svg/discordBlue.svg" height="80" alt="Discord Logo">Bot</h2> -->
-          <h3 style="text-align: center;">Move All Users From a Discord Channel Fast !</h3>
-          <h3>How To Use:</h3>
-          <ol>
-            <li style="text-align:left;">Invite the MassMover Bot to your discord server.</li>
-            <li style="text-align:left;">If you are moving up to 10 users, add the LVL 1 POWER UPS</li>
-            <li style="text-align:left;">If you are moving up to 20 users, add the LVL 1 and LVL 2 POWER UPS</li>
-            <li style="text-align:left;">If you are moving more than 20 users, add the LVL 1, LVL 2 and LVL 3 POWER UPS</li>
-            <li style="text-align:left;">Make sure the channels are not blocking "Move" permissions.</li>
-            <li style="text-align:left;">Type "> help" in a channel the bot can read and write.</li>
-            <li style="text-align:left;">Only users with Move permission will be able to use the bot !</li>
-            <h4>Done!</h4>
-          </ul>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .blurplebox {
+      border-radius: 20px;
+      padding: 10px ;
+      border: 10px solid #7289DA ;
+      margin: 10px;
+    }
+  </style>
+  <head>
+    {{ block "title" . }}
+      <title>{{ if .IsHome }}{{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ end }}</title>
+    {{ end }}
+    {{ partial "head.html" . }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  </head>
+  <body class="{{ if ne $.Site.Params.defaultTheme "light" -}} dark-theme {{- end -}}">
+    {{ partial "header.html" . }}
+    <div class="blurplebox" >
+      <div class="row">
+        <div class="col-12">
+          <center>
+            <h1 style="text-align:center">MassMover Bot</h1>
+            <h4 style="text-align:center">For<img src="svg/discordBlue.svg" height="55" alt="Discord Logo"></h4>
+            <h3 style="text-align: center;">Move Players Fast !</h3>
+          </center>
         </div>
-      <div class="Blurplebox">
-        <div class="fullcolumn"> 
-            <center>
-                <a href="https://discordapp.com/oauth2/authorize?client_id=408350183198294016&scope=bot&permissions=16780288"><h2 style="text-align: center;">Invite the MassMover Bot</h2><img src="img/mvbot.png" width="20%" alt="CommanderBot Badge"></a>
-            </center>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-6">
+            <h3>How To Use it:</h3>
+            <ul>
+              <li style="text-align:left;">Invite the MassMover Bot to your server.</li>
+              <li style="text-align:left;">Type "> help" in a channel that the bot can read and write.</li>
+              <li style="text-align:left;">More than 10 players: add the LVL 1 POWER UP</li>
+              <li style="text-align:left;">More than 20 players: add the LVL 1 and 2 POWER UPS</li>
+              <li style="text-align:left;">More than 30 players: add the LVL 1, 2 and 3 POWER UPS</li>
+              <li style="text-align:left;">Make sure the channels are not blocking "Move" permissions.</li>
+              <li style="text-align:left;">Only users with "Move" permission will be able to use the bot !</li>
+              <h4>Done!</h4>
+            </ul>
         </div>
-        <div class="row" style="padding: 30px ;">
-          <div class="column" >
-            <center>
-              <a href="https://discordapp.com/oauth2/authorize?client_id=542891814026346506&scope=bot&permissions=16777216"> <h3 style="text-align: center;">Invite the LVL 1 Power UP! </h3><img src="img/lvl1.png" width="40%" alt="LVL1 PowerUp"></a>
-            </center>
-          </div>
-          <div class="column" >
-            <center>
-              <a href="https://discordapp.com/oauth2/authorize?client_id=543838329830113294&scope=bot&permissions=16777216"> <h3 style="text-align: center;">Invite the LVL 2 Power UP!</h3> <img src="img/lvl2.png" width="40%" alt="LVL2 PowerUp"></a>
-            </center>
-          </div>
-          <div class="column" >
-              <center>
-                <a href="https://discordapp.com/oauth2/authorize?client_id=543888349442605066&scope=bot&permissions=16777216"> <h3 style="text-align: center;">Invite the LVL 3 Power UP!</h3> <img src="img/lvl3.png" width="40%"  alt="LVL3 PowerUp Badge"></a>
-              </center>
-          </div>
+        <div class="col-md-12 col-sm-12 col-lg-6">
+          <center>
+            <h3>Demo:</h3>
+            <img src="img/demo.gif" scale="100%" alt="Moving 28 persons with 2 powerup bots">
+          </center>
         </div>
       </div>
     </div>
-
-  {{ block "footer" . }}
-    {{ partial "footer.html" . }}
-  {{ end }}
-</div>
-
-</body>
+    <div class="blurplebox">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-2 col-sm-0"></div>
+          <div class="col-lg-4 col-md-8 col-sm-12">
+            <center>
+                <a href="https://discordapp.com/oauth2/authorize?client_id=408350183198294016&scope=bot&permissions=16780288">
+                  <h2 style="text-align:center;">Invite the MassMover Bot!</h2>
+                  <img src="img/mvbot.png"  alt="CommanderBot Badge">
+                </a>
+            </center>
+          </div>
+          <div class="col-lg-4 col-md-2 col-sm-0"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-4" >
+            <center>
+                <a href="https://discordapp.com/oauth2/authorize?client_id=542891814026346506&scope=bot&permissions=16777216"> 
+                  <h3 style="text-align: center;">LVL 1 Power UP!</h3>
+                  <img src="img/lvl1.png" alt="LVL1 PowerUp">
+                </a>
+            </center>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <center>
+                <a href="https://discordapp.com/oauth2/authorize?client_id=543838329830113294&scope=bot&permissions=16777216"> 
+                  <h3 style="text-align: center;">LVL 2 Power UP!</h3>
+                  <img src="img/lvl2.png" alt="LVL2 PowerUp">
+                </a>
+            </center>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <center>
+                <a href="https://discordapp.com/oauth2/authorize?client_id=543888349442605066&scope=bot&permissions=16777216"> 
+                  <h3 style="text-align: center;">LVL 3 Power UP!</h3>
+                  <img src="img/lvl3.png"  alt="LVL3 PowerUp Badge">
+                </a>
+            </center>
+          </div>
+        </div>
+      </div>    
+    </div>
+    {{ block "footer" . }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+  </body>
 </html>
