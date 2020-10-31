@@ -22,7 +22,7 @@ The rest will be the servant Tokens, and should be added in a List.
 The Permission integer must be 16780288 (Move, Read messages, and Write messages).
 
 ## Installation
-You can get the lastest binary here: (soon)
+You can get the lastest binary here: [github.com/auyer/MassMoverBot/releases](https://github.com/auyer/MassMoverBot/releases)
 
 ## Building Yourself
 ```go
